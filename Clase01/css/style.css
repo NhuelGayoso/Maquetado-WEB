@@ -1,0 +1,131 @@
+/* Flujo de trabajo */
+*{
+    /* todas las cajas tienen que tener este formato para calcular el espacio ocupado  */
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 16px;
+}
+
+
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+#padreCercano {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Selectores compuestos */
+
+/* Grupal */
+h1,
+h3 {
+  font-family: cursive;
+}
+
+/* Adyacente */
+h2 + p {
+    /* 
+    h2 -> Selector de referencia
+    + -> Tipo de relacion (escrito despues del elemento de referencia)
+    p -> S elector a modificar
+    */
+    background-color: cadetblue;
+    color: white;
+}
+
+/* descendente */
+
+/* hijo de */
+div p{
+    background-color: blue;
+    color: white;
+}
+
+.unaClase p {
+    background-color: darkgreen;
+    color: darkkhaki;
+}
+
+/* hijo directo de */
+div > p{
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.unaClase>p{
+    background-color: crimson;
+    color: white;
+}
+
+/*Tipos de Medidas */
+
+.absoluta{
+    width: 150px;
+    height: 150px;
+    background-color: coral;
+    margin-bottom: 20px;
+
+}
+
+.porcentaje,.porcentaje1{
+    width: 50%;
+    height: 150px; /*por defecto, todos los elementos tienen un height : auto -> tamaño = auto * 20%*/
+    background-color: darkmagenta;
+    margin-bottom: 20px;
+}
+
+
+/* EM */
+
+.padreEm{
+    font-size: 24px;
+}
+
+
+.em{
+    background-color: darkorange;
+    width: 2em;
+    height: 2em;
+}
+
+.rem{
+    /* por defecto, los navegadores setean el font size a 16px */
+    width: 5rem;
+    height: 5rem;
+    background-color: darkslateblue;
+}
+
+/* Modelo de caja 
+=>caracteristicas de las cajas
+    - width
+    - heigth
+    - border
+    - margin
+    - padding
+    comportamiento de la caja (tipo de elemento)
+        => display
+            -block
+            -inline
+            -inline-block
+            -none
+            -flex
+            -grid
+    Calculo del espacio ocupado por la caja
+        => box sinzing
+            -content-box -> espacio = width+content+border+padding(+margin) 
+            -border-box -> espacio ocupado = width(+margin)
+*/
+
+#modelo{
+    background-color: white;
+    color: black;
+    
+    /* CARACTERISTICAS */
+    width: 200px;
+    margin: 20px auto;
+    border: 5px solid black;
+    padding: 20px;
+}
